@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Cool Todo Board</title>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-tasks"></i> Cool Todo Board</h1>
+    </header>
+    <main>
+        <section id="todo" class="board-column">
+            <div class="column-header">
+                <h2>Todo</h2>
+                <button onclick="add('todo')" class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+            <div id="todo-item-1" class="component" draggable="true">
+                <h3>Tododdd</h3>
+                <p>Description</p>
+                <div class="task-meta">
+                    <span class="difficulty">Difficulty Level</span>
+                    <span class="date">Time</span>
+                </div>
+            </div>
+        </section>
+        <section id="in-progress" class="board-column">
+            <div class="column-header">
+                <h2>In Progress</h2>
+                <button onclick="add('in-progress')" class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+        </section>
+        <section id="under-review" class="board-column">
+            <div class="column-header">
+                <h2>Under Review</h2>
+                <button onclick="add('under-review')" class="add-btn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+        </section>
+        <section id="finished" class="board-column">
+            <div class="column-header">
+                <h2>Finished</h2>
+                <button onclick="remove('finished')" class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
